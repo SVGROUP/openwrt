@@ -163,8 +163,8 @@ generate_network() {
 		static)
 			local ipad netm prefix
 			case "$1" in
-				lan) ipad=${ipaddr:-"192.168.1.1"} ;;
-				*) ipad=${ipaddr:-"192.168.$((addr_offset++)).1"} ;;
+				lan) ipad=${ipaddr:-"10.0.4.1"} ;;
+				*) ipad=${ipaddr:-"10.0.$((addr_offset++)).1"} ;;
 			esac
 
 			netm=${netmask:-"255.255.255.0"}
@@ -313,8 +313,8 @@ generate_static_system() {
 	uci -q batch <<-EOF
 		delete system.@system[0]
 		add system system
-		set system.@system[-1].hostname='OpenWrt'
-		set system.@system[-1].timezone='GMT0'
+		set system.@system[-1].hostname='R404'
+		set system.@system[-1].timezone='Asia/Shanghai'
 		set system.@system[-1].zonename='UTC'
 		set system.@system[-1].ttylogin='0'
 		set system.@system[-1].log_size='128'
