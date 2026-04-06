@@ -33,7 +33,7 @@ VERSION_CODE:=$(call qstrip,$(CONFIG_VERSION_CODE))
 VERSION_CODE:=$(if $(VERSION_CODE),$(VERSION_CODE),$(REVISION))
 
 VERSION_REPO:=$(call qstrip,$(CONFIG_VERSION_REPO))
-VERSION_REPO:=$(if $(VERSION_REPO),$(VERSION_REPO),https://mirrors.tuna.tsinghua.edu.cn/openwrt/releases/25.12-SNAPSHOT)
+VERSION_REPO:=$(if $(VERSION_REPO),$(VERSION_REPO),https://mirror.sjtu.edu.cn/openwrt/releases/25.12-SNAPSHOT)
 
 VERSION_DIST:=$(call qstrip,$(CONFIG_VERSION_DIST))
 VERSION_DIST:=$(if $(VERSION_DIST),$(VERSION_DIST),OpenWrt)
